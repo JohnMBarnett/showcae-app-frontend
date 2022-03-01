@@ -1,38 +1,132 @@
-.App {
+:root {
+  font-size: 10px;
+  --primary_color: #ed4337;
+  --light_color: #fbfaf5;
+  --dark_color: #181a18;
+  --nav_height: 15rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: var(--light_color);
+}
+
+button {
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary_color);
+  background: var(--light_color);
+  border: none;
+}
+
+img {
+  width: 75px;
+  border-radius: 100px;
+}
+
+.nav_container {
+  height: var(--nav_height);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 2rem 15rem 0 15rem;
+  border-bottom: var(--dark_color) solid 0.2rem;
+}
+
+.nav_container h1 {
+  font-size: 5rem;
+  color: var(--primary_color);
+}
+
+.pic_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list_container {
+  border-right: 2px solid var(--dark_color);
+  width: 20%;
+  max-width: 20%;
+  height: calc(100vh - var(--nav_height));
+  max-height: calc(100vh - var(--nav_height));
   text-align: center;
+  overflow: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  color: var(--primary_color);
+  font-size: 2rem;
+  padding-top: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main_container {
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form_container {
+  width: 80%;
+  height: calc(100vh - var(--nav_height));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fefefe;
+}
+
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: var(--dark_color) solid 1px;
+  width: 30%;
+  height: 40vh;
+  background: var(--light_color);
 }
 
-.App-link {
-  color: #61dafb;
+form button {
+  background-color: #fefefe;
+  border: var(--dark_color) solid 0.1rem;
+  margin: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+
+.task {
+  display: flex;
+  flex-flow: column;
+  padding: 1rem;
+  margin: 1rem;
+  border: solid 1px var(--dark_color);
+  background-color: #fefefe;
+  overflow: hidden;
+}
+
+.task h3 {
+  font-size: 2rem;
+}
+
+.task p {
+  font-size: 1.5rem;
+}
+
+
+.task .incompleted button {
+  background-color: #fefefe;
+}
+
+.task .completed button {
+  background-color: #fefefe;
+  color: #99CC99;
 }
